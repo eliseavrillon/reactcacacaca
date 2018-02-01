@@ -14,15 +14,12 @@ class App extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
 
     handleChange(event) {
         this.setState({value: event.target.value.toLowerCase()});
     }
 
-    componentDidMount() { 
+    componentDidMount() {
         //on recherche les series
         fetch('seriesList.json', {}) //je récupère le tableau
         //promesse d'afficher une réponse
